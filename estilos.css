@@ -1,4 +1,6 @@
 /* estilos.css */
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -9,52 +11,91 @@ body, html {
 }
 
 header {
-    position: fixed;
-    top: 0;
     width: 100%;
-    background: linear-gradient(135deg, #0B0B0B  0%, #F5F5F5 100%);
-    color: white;
+    position: fixed; /* Mantiene el header en la parte superior de la página */
+    top: 0;
+    left: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    z-index: 1000;
+    padding: 10px 50px;
+    background: linear-gradient(135deg, #333333 0%, #FFFFFF 100%);
+    color: white;
 }
 
-#menu-superior a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 700;
+#menu-superior {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#logo {
+    /* Ajustes para el logo si son necesarios */
+}
+
+#enlaces-proyectos {
+    padding-right: 100px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los enlaces al final de la barra del menú */
+}
+
+#enlaces-proyectos a {
+    margin-left: 20px; /* Espacio entre enlaces */
+    color: black; /* Estilo de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+/* Estilo base para proyectos */
+
+
+/* Efecto de zoom horizontal para pantallas grandes */
+
 
 #panel-proyectos {
+    padding-top: 60px;
     display: flex;
+    flex-direction: row; /* Alineación lado a lado por defecto */
+    flex-wrap: wrap; /* Permite el ajuste responsivo */
     padding-top: 70px; /* Ajuste para el menú */
-    margin: 0 auto;
-    width: 100%;
+    margin: 0;
     align-items: stretch;
-    overflow-x: auto;
 }
 
 .proyecto {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: transform 0.5s ease;
-    box-sizing: border-box;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0; /* Elimina los espacios externos */
     height: calc(100vh - 70px); /* Altura total menos el menú */
     background: linear-gradient(135deg, #F5F5F5 0%, #0B0B0B 100%);
     color: #333;
     font-size: 24px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin: 0 10px; /* Espacio entre proyectos */
 }
 
 .proyecto:hover {
-    transform: scale(1.15); /* Mayor efecto de acercamiento */
-    z-index: 10;
+    transform: scaleX(1.05); /* Aumenta solo el ancho */
+}
+
+#logo img {
+    height: 50px; /* Ajusta esta altura según necesites */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    #panel-proyectos {
+        flex-direction: row; 
+    }
+
+    .proyecto {
+        height: 23vh; /* Cada proyecto ocupa el 25% del alto de la ventana de visualización */
+        width: 100%; /* Asegura que cada proyecto ocupe el ancho completo de la pantalla */
+    }
+    .proyecto:hover {
+        transform: scaleY(1.05); 
+    }
 }
