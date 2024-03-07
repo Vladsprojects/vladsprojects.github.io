@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba</title>
+    <meta charset="UTF-8">
+    <html lang="en">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+</head>
+<body>
+    <button onclick="trainModel()">entrenar</button>
+    <script>
+        
+      // Paso 2: Preparar los datos
+      // Imagina que tenemos los siguientes paquetes de entrada y deseamos predecir el siguiente número en la secuencia
+      const xs = tf.tensor2d([[13,16,36,44,50,3,5],[2,24,26,46,50,2,7],[19,29,34,46,47,2,3],[15,20,29,39,48,1,7],[12,16,27,33,44,7,8],
+                        [4,10,14,38,50,9,12],[4,6,20,24,25,5,9],[17,30,42,48,50,4,8],[6,28,37,39,43,9,12],[2,13,37,38,48,5,9],
+                        [10,20,41,43,45,2,12],[6,14,34,44,49,4,12],[8,27,30,35,47,9,10],[2,3,19,36,37,6,9],[7,15,18,46,49,10,12]]);
+
+      const ys = tf.tensor2d([[24,27,28,30,49,1,12],[23,24,35,37,45,9,12],[13,17,18,20,46,4,9],[8,13,14,24,26,1,2],[23,31,37,42,48,3,7],
+                            [2,7,21,28,45,5,11],[14,23,39,48,50,3,12],[8,19,32,41,42,9,12],[5,10,19,27,30,5,6],[13,20,23,27,42,5,9],
+                            [4,7,18,39,50,3,8],[2,9,12,39,40,1,3],[16,17,18,45,49,9,12],[10,18,21,33,45,8,12],[27,28,44,48,50,7,12]]); // Supongamos que estos son los números que deseas predecir
+
+      // Convertir datos a tensores
+      
+
+      // Asumiendo que xs es [3, 5] y deseas predecir 5 valores por cada entrada
+    const model = tf.sequential();
+    model.add(tf.layers.dense({units: 7, inputShape: [7]})); // Ajustado para predecir 5 valores
+
+    model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
+
+    // Asegúrate de que tus datos de salida (ys) estén correctamente formateados para este modelo
+    // Por ejemplo, si tienes 3 ejemplos de entrada, ys debería tener la forma [3, 5]
+
+
+    async function trainModel() {
+    await model.fit(xs, ys, {
+        epochs: 2, // Puedes ajustar el número de epochs
+        callbacks: {
+            onEpochEnd: (epoch, logs) => {
+                console.log(`Época ${epoch + 1}: Pérdida = ${logs.loss}`);
+        }
+    }
+    });
+    }
+
+    // Llama a la función para iniciar el entrenamiento
+    trainModel().then(() => {
+        console.log('Modelo entrenado');
+        model.evaluate(xs, ys).print()
+
+        function generarSecuencia() {
+            // Inicializar alguna forma de estado o entrada inicial si es necesario
+            let numeros1a50 = Array.from({length: 5}, () => Math.floor(Math.random() * 50) + 1);
+                
+            // Generar 2 números del 1 al 10
+            let numeros1a12 = Array.from({length: 2}, () => Math.floor(Math.random() * 12) + 1);
+                
+                return numeros1a50.concat(numeros1a12);
+            }
+
+            // Ajusta la secuencia generada a las restricciones específicas (1-20 para los tres primeros, 1-10 para los dos últimos)
+            function ajustarSecuencia(secuencia) {
+            // Esta función necesitaría ajustar los números generados al rango deseado
+            // Esto podría implicar redondear, mapear probabilidades a rangos discretos, etc.
+            }
+
+            // Ejemplo de cómo podrías llamar a generarSecuencia
+            let secuenciaPredicha = generarSecuencia();
+            console.log("Secuencia predicha:", secuenciaPredicha);
+    });
+
+    </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu Portafolio</title>
+    <title>Vlad's Projects</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -14,7 +14,7 @@
                 <img src="logo.PNG" alt="Logo" style="height: 50px;"> <!-- Ajusta el valor de height según necesites -->
             </a>
             <div id="enlaces-proyectos">
-                <a href="#cv">CV</a>
+                <a href="CV/cv.html">CV</a>
                 <a href="#proyecto1">Proyecto 1</a>
                 <a href="#proyecto2">Proyecto 2</a>
                 <a href="#proyecto3">Proyecto 3</a>
@@ -22,10 +22,10 @@
         </nav>
     </header>
     <main id="panel-proyectos">
-        <section id="cv" class="proyecto">CV</section>
-        <section id="proyecto1" class="proyecto">Proyecto 1</section>
-        <section id="proyecto2" class="proyecto">Proyecto 2</section>
-        <section id="proyecto3" class="proyecto">Proyecto 3</section>
+        <button id="cv" class="proyecto" onclick="window.location.href='CV/cv.html';">CV</button>
+        <button id="proyecto1" class="proyecto">Proyecto 1</button>
+        <button id="proyecto2" class="proyecto">Proyecto 2</button>
+        <button id="proyecto3" class="proyecto">Proyecto 3</button>
     </main>
     <script src="comportamiento.js"></script>
 </body>

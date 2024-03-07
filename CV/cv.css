@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #282828; /* Fondo suave */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+#nombre{
+    padding-top: 40px;
+    margin-top: -20px;
+}
+
+.div-imagen-chip {
+    position: relative;
+    height: 600px; /* Ajusta según necesites */
+    width: 100%;
+    overflow: hidden;
+    color:rgb(0, 0, 0);
+    background-image: url('../pictures/chip.jpg'); /* Ajusta la ruta de tu imagen */
+}
+
+.div-imagen-chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../pictures/chip.jpg'); /* Ajusta la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Ajusta el nivel de difuminado según prefieras */
+    opacity: 0.5; /* Ajusta la opacidad según necesites */
+}
+#contenido-nombre {
+    color: black;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad */
+    margin-left: 30%; /* Ajusta al gusto para el espaciado interno */
+    margin-right: 30%;
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para distinguir del fondo */
+    border-radius: 10px; /* Bordes redondeados, opcional */
+  }
+
+  .galeria_mia {
+    margin-top: 30px; /* Ajusta este valor según necesites */
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .galeria_mia img{
+    position: relative;
+    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Trata la imagen como un bloque para permitir el centrado */
+    margin: 20px auto; /* Centra la imagen horizontalmente y añade algo de espacio arriba y abajo */
+    max-height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+
+
+main {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro para las secciones */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Texto blanco para contrastar con el fondo oscuro */
+}
+header p{
+    color: black;
+}
+
+h2, h3 {
+    color: black; /* Color brillante para títulos, añade un toque futurista */
+    margin: 10px 0;
+}
+
+.desplegable, .titulo-desplegable {
+    cursor: pointer;
+    font-weight: bold;
+    color: #4fd1c5; /* Resalta los títulos desplegables con un color futurista */
+    background-color: #282828; /* Fondo oscuro para los títulos desplegables */
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.desplegable:hover, .titulo-desplegable:hover {
+    background-color: #333333; /* Cambio sutil en hover */
+}
+
+.simbolo {
+    float: right;
+}
+
+.contenido-desplegable, .contenido-desplegable3 {
+    display: none;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #242424; /* Un fondo ligeramente más claro para el contenido */
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #bbbbbb; /* Texto más claro para mejorar la legibilidad */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    main {
+        width: 85%;
+        padding: 15px;
+    }
+
+    h2, h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+    }
+
+    h2, h3 {
+        font-size: 0.9em;
+    }
+
+    .desplegable, .titulo-desplegable {
+        font-size: 0.9em;
+    }
+}
