@@ -1,27 +1,127 @@
 /* estilos.css */
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 body, html {
     margin: 0;
-    padding: 0;
+    padding: 30px;
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background: #fff; /* Fondo general de la página */
+    max-width: 1200px;
+    margin: 0 auto;
+    border: none;
 }
 
+
+img{
+    max-width: 100%;
+}
+
+
+
+/*
 header {
     width: 100%;
-    position: fixed; /* Mantiene el header en la parte superior de la página */
+    position: fixed; /* Mantiene el header en la parte superior de la página
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 30px;
     background: linear-gradient(135deg, #333333 0%, #FFFFFF 100%);
     color: white;
+}
+*/
+
+main{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+
+}
+.container-title{
+    padding: 30px;
+    background-color: #eee;
+    margin-bottom: 50px;
+    color: #222;
+}
+footer{
+    padding: 30px;
+    background-color: #eee;
+    margin-top: 50px;
+    color: #222;
+}
+a{
+    text-decoration: none !important;
+}
+
+.container-img{
+    flex: 1;
+    background-color: #F7F7F9;
+}
+
+.container-info-proyecto{
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+}
+
+.card-list-proyectos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.card{
+    cursor: pointer;
+    border: none !important;
+   
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    
+}
+
+.card-img{
+    background: transparent;
+    margin-bottom: 15px;
+}
+
+.card-img img{
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.info-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-proyecto{
+    color: #252525;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.text-proyecto h3{
+    color: inherit;
+    font-weight: inherit;
+    font-size: 25px;
+}
+
+.text-proyecto p{
+    color: #666;
+    font-size: 20px;
 }
 
 #menu-superior {
@@ -77,6 +177,17 @@ header {
 .proyecto:hover {
     transform: scaleX(1.05); /* Aumenta solo el ancho */
 }
+.nav-item:hover, .dropdown-item:hover {
+    font-size: 15px;
+    font-weight:500;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
 
 #logo img {
     height: 50px; /* Ajusta esta altura según necesites */
@@ -96,3 +207,10 @@ header {
         transform: scaleY(1.05); 
     }
 }
+
+
+/*______________________________________________________________________*/ 
+/*______________________________________________________________________*/ 
+/*______________________________________________________________________*/ 
+/*______________________________________________________________________*/ 
+

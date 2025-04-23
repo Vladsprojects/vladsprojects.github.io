@@ -1,0 +1,19 @@
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+
+    img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    span{
+        color: var(--color-light);
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+}
