@@ -482,4 +482,60 @@
     color: #ddd;
   }
   
- 
+ @media (max-width: 992px) {
+
+  .hero-banner{
+    height: auto;
+    padding-top: 140px;
+
+    & > div{
+      flex-direction: column;
+      gap: 30px;
+
+    }
+
+    .content{
+
+      h1{
+        font-size: 50px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
+  .container-image{
+    margin-top: 0;
+    padding: 0 20px;
+
+    .main-image{
+
+      height: 600px !important;
+      width: 400px !important;
+
+
+    }
+
+    .banner-image1,
+    .banner-image2{
+      width: 100px;
+      height: 100px;
+      border-width: 4px !important;
+    }
+
+    .banner-image1{
+      left: 0 !important;
+      bottom: 10%;
+      transform: translateY(-50%) translateX(320px) !important;
+    }
+
+    .banner-image2{
+      right: 0 !important;
+      top: 25%;
+      transform: translateY(200px)!important; 
+    }
+  }
+
+ }
