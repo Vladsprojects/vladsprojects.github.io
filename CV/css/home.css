@@ -479,6 +479,12 @@
 
 @media (max-width: 992px) {
 
+  body{
+    p{
+       font-size: 16px;
+    }
+  }
+
 .hero-banner{
   height: auto;
   padding-top: 140px;
@@ -533,4 +539,67 @@
   }
 }
 
+}
+
+/* PROBAMOS */
+
+@media (max-width: 992px) {
+  .section-proyectos {
+    padding-top: 100px;
+
+    .content {
+      h2 {
+        font-size: 36px;
+      }
+
+      .container-proyectos {
+        flex-direction: column;
+        overflow-x: auto;
+        scroll-snap-type: none;
+
+        .proyectos {
+          flex: 1 0 auto;
+          padding: 20px;
+          img {
+            width: 180px;
+            height: 180px;
+          }
+
+          h3 {
+            font-size: 22px;
+          }
+
+          p {
+            font-size: 18px;
+            width: 90%;
+          }
+        }
+      }
+
+      .carousel-wrapper {
+        display: none; 
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px; 
+  }
+  #experiencia_laboral {
+    width: 90%;
+    h3 {
+      font-size: 32px !important;
+    }
+
+    ul li {
+      margin-left: 20px;
+    }
+
+    .accordion-button {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
 }

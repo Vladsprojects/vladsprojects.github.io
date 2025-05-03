@@ -80,3 +80,34 @@ footer{
         }
     }
 }
+
+
+@media (max-width: 768px) {
+    footer {
+
+       
+      padding: 50px 20px;
+      & > div {
+        gap: 40px;
+      }
+
+      .logotipo{
+        padding-bottom: 100px !important;
+    }
+  
+      .container-social-copyright {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+  
+        ul {
+          justify-content: center;
+        }
+      }
+  
+      .content ul {
+        align-items: center;
+      }
+    }
+  }
+  
