@@ -14,7 +14,13 @@
 
 
 </head>
-<body>
+<body onload="abrir()">
+  <script>
+    function abrir(){
+    alerta.classList.add("open");
+    console.log("ABIERTO")
+}
+  </script>
   <!-- CABECERA-->
 <header>
     <div class="container header-expand">
@@ -71,6 +77,24 @@
     </div>
 
 </header>
+
+
+<!-- ALERT -->
+
+<div class="alerta" id="alerta">
+  <div class="alerta_interno">
+      <h2> Advertencia! </h2>
+      <p> De momento la página web no se ve del todo bien en la mayoría de los teléfonos o tablets, está diseñada para PC, estoy trabajando para que sea responsive, disculpa la molestia!</p>
+      <button onclick="cerrar()"> Cerrar </button>
+  </div>
+</div>
+
+<script>
+  const alerta = document.getElementById("alerta");
+  function cerrar(){
+      alerta.classList.remove("open");
+  };
+</script>
 
  <!-- INICIO -->
 <section class="hero-banner">
@@ -287,19 +311,16 @@
             <strong>Policlínica Critón Salud (Mayo 2023 - Febrero 2024). Clínica dental Teatro32 (Marzo 2024-Actualidad) </strong> 
             <ul>
               <li>
-                Organizar y gestionar agendas de doctores y pacientes
+                Responsable de coordinar las agendas médicas, organización de las consultas, inventario del material sanitario
               </li>
               <li>
-                Coordinación del personal tanto médico como de recepción para un óptimo funcionamiento clínico
+                Gestión administrativa, presupuestos, facturación y financiación, seguimiento de los tratamientos de los pacientes.
               </li>
               <li>
-                Acceso y manejo de un profundo uso del software clínico tanto a nivel de coordinador como administrativo
+                Encargado tanto de perfiles administrativos y médicos, como, documentación y consentimientos informados en el sistema clínico.
               </li>
               <li>
-                Venta de tratamientos personalizados para cada necesidad de los pacientes
-              </li>
-              <li>
-                Implementación de distintos programas de soporte.
+                Trato directo con varias entidades como seguros, proveedores y otras clínicas
               </li>
             </ul>
           </div>

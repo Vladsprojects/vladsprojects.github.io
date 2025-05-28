@@ -583,6 +583,61 @@
   }
 }
 
+.alerta{
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerta_interno{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 35px 55px;
+  text-align: center;
+  width: 500px;
+  max-width: 90%
+
+}
+
+.alerta h2{
+  margin:0
+}
+
+.alerta p{
+  line-height: 24px;
+}
+
+.alerta.open{
+  opacity: 1;
+  z-index: 999;
+}
+
+.alerta button{
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 999px;
+  background-color: var(--color-primary);
+  margin-top: 30px;
+}
+.alerta button:hover{
+  padding: 5px;
+  border-radius: 999px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 16px; 
