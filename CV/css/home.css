@@ -616,6 +616,7 @@
 
 .alerta p{
   line-height: 24px;
+  color: #111;
 }
 
 .alerta.open{
