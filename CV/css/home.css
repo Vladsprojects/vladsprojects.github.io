@@ -541,6 +541,43 @@
 
 }
 
+
+.seccion-pixelada-contenedor {
+    position: relative; 
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.pixelado-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px) saturate(0%) grayscale(100%);
+    -webkit-backdrop-filter: blur(10px) saturate(0%) grayscale(100%);
+    z-index: 10;
+}
+
+.mensaje-proceso {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    z-index: 11; 
+}
+
 /* PROBAMOS */
 
 @media (max-width: 992px) {
