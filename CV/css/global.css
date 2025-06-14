@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --color-primary: #f98b17;
-	--color-secondary: #1f2120;
-	--text-color: #aeb0b4;
-	--color-light: #fff;
-	--color-divider: #ffffff1a;
-	--dark-color-divider: #0e110d;
+      --color-primary: #f98b17;
+    --color-secondary: #1f2120;
+    --text-color: #aeb0b4;
+    --color-light: #fff;
+    --color-divider: #ffffff1a;
+    --dark-color-divider: #0e110d;
 
-    --default-font: 'Hanken Grotesk', serif;
+    --default-font: 'Hanken Grotesk', sans-serif;
 
     --breakpoint-sm: 576px;
-	--breakpoint-md: 768px;
-	--breakpoint-lg: 992px;
-	--breakpoint-xl: 1200px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    --card-background: var(--color-light);
+    --border-color: var(--dark-color-divider);
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.4s;
+
 
 }
 
