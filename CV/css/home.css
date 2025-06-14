@@ -710,6 +710,7 @@
 }
 
 .listado-seccion .section-title {
+    text-transform: uppercase;
     text-align: center;
     color: var(--color-light);
     margin-bottom: 40px;
