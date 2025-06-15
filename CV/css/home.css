@@ -34,9 +34,10 @@
           width: 90%;
           font-size: 50px;
           text-transform: uppercase;
+
           letter-spacing: -1px;
           line-height: 1.1;
-          font-weight: 800;
+          font-weight: 800 !important;
           text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
           color: var(--color-light);
           text-align: center;
@@ -141,6 +142,7 @@
 
 .hero-banner{
   background-image: url(../pictures/Fondo.png);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -699,14 +701,25 @@
 
 
 .listado-seccion {
-    background-color: var(--text-color);
+   
+    background-image: url(../pictures/fondo_ap.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    background-attachment: fixed;
     font-family: var(--default-font);
-    color: var(--text-color); 
+    color: var(--color-divider); 
     padding: 40px 20px; 
     box-sizing: border-box; 
     width: 100%; 
     padding-bottom: 150px;
     padding-top: 100px;
+
+    h2{
+      color: #111 !important;
+    }
 }
 
 .listado-seccion .section-title {
@@ -715,7 +728,7 @@
     color: var(--color-light);
     margin-bottom: 40px;
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 1000;
     padding-bottom: 50px;
 }
 
@@ -749,7 +762,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-light);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -815,5 +828,7 @@
 
 .list-item:hover .item-header {
     background-color: var(--color-secondary);
+    
+    color: var(--color-primary);
 }
 
